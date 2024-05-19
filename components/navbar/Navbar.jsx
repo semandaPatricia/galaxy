@@ -7,7 +7,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
-  const [textColor, setTextColor] = useState('black');
+  const [textColor, setTextColor] = useState('white');
 
   const handleNav = () => {
     setNav(!nav);
@@ -31,17 +31,17 @@ const Navbar = () => {
       style={{ backgroundColor: `${color}` }}
       className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
     >
-      <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white uppercase'>
+      <div className='max-w-[1240px] m-auto flex justify-between items-center p-4  uppercase'>
         <Link href='/'>
           <h1 style={{ color: `${textColor}` }} className='font-bold text-2xl'>
           Epitum{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-800">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-red-800">
             {" "}
             Do.{" "}
           </span>
           </h1>
         </Link>
-        <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
+        <ul style={{ color: `${textColor}` }} className='hidden sm:flex '>
           <li className='p-4'>
             <Link href='/'>Home</Link>
           </li>
@@ -74,7 +74,7 @@ const Navbar = () => {
         >
          
           <ul>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 text-gray-300'>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 '>
               <Link href='/'>Home</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
